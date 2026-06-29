@@ -526,7 +526,7 @@
     empty.style.display = 'none';
 
     tbody.innerHTML = filtered.map(r => {
-      const name = (r.last_name||'') + ', ' + (r.first_name||'') + (r.middle_name ? ' ' + r.middle_name[0] + '.' : '');
+      const name = (r.last_name||'') + ', ' + (r.first_name||'') + (r.middle_name ? ' ' + r.middle_name : '');
       return `<tr>
         <td style="color:var(--text-muted);font-weight:700;font-size:11px;">#${r.queue_number}</td>
         <td style="font-weight:600;">${name}</td>
